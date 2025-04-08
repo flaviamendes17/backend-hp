@@ -52,4 +52,5 @@ const updateHouse = async (req, res) => {
         res.status(500).json({ message: "Erro ao atualizar casa." });
     }
 };
+
 module.exports = { getAllHouses, getHouse, createHouse, deleteHouse, updateHouse };
