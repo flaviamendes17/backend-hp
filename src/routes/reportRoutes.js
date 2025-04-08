@@ -6,5 +6,8 @@ const reportController = require("./../controllers/reportController");
 //Rota para gerar CSV
 router.get("/report/csv", reportController.exportWizardCSV);
 
+//Rota para o PDF
+router.get("/report/pdf", reportController.exportWizardPDF);
+
 
 module.exports = router;

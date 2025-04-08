@@ -48,7 +48,7 @@ const exportWizardPDF = async (req, res) => {
         //Add dados dos bruxos
         wizards.forEach((wizard) => {
             doc.text(
-                `${wizard.id} | ${wizard.name} | ${wizard.house_name} || "Sem Casa"`
+                `${wizard.id} | ${wizard.name} | ${wizard.house_name || "Sem Casa"}`
             );
         });
 
