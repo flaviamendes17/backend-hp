@@ -4,12 +4,14 @@ CREATE TABLE houses (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) UNIQUE NOT NULL,
     founder VARCHAR(100) NOT NULL
+
 );
 
 CREATE TABLE wizards (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    house_id INTEGER REFERENCES houses(id) ON DELETE SET NULL
+    house_id INTEGER REFERENCES houses(id) ON DELETE SET NULL,
+    photo VARCHAR(255)
 );
 
 INSERT INTO houses (name, founder) VALUES 
