@@ -14,6 +14,10 @@ app.use(express.json());
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+// Swagger
+const setupSwagger = require('./src/config/swagger.js'); // Caminho até o arquivo
+setupSwagger(app);
+
 
 app.use("/api", wizardRoutes); 
 app.use("/api", houseRoutes); 
