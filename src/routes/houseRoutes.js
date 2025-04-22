@@ -1,7 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const houseController = require("../controllers/houseController.js");
+const apiKeyMiddleware = require("../config/apiKey.js");    
 
+router.use(apiKeyMiddleware);
 /**
  * @swagger
  * tags:
